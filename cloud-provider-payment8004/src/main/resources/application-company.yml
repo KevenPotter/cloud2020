@@ -1,0 +1,4 @@
+spring:
+  cloud:
+    zookeeper:
+      connect-string: 10.5.1.131:2181
