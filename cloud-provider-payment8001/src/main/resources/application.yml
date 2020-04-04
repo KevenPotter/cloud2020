@@ -11,6 +11,10 @@ spring:
     username: root
     password:
 
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  type-aliases-package: com.atguigu.springcloud.entities
+
 eureka:
   client:
     #表示是否将自己注册进EurekaServer,默认为true
@@ -30,7 +34,3 @@ eureka:
     lease-renewal-interval-in-seconds: 1
     # Eureka服务端在收到最后一次心跳后等待时间上限,单位为秒(默认是90秒),超时将剔除服务
     lease-expiration-duration-in-seconds: 2
-
-mybatis:
-  mapperLocations: classpath:mapper/*.xml
-  type-aliases-package: com.atguigu.springcloud.entities

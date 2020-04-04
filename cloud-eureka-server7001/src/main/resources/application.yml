@@ -1,6 +1,3 @@
-server:
-  port: 7001
-
 eureka:
   instance:
     #Eureka服务端的示例名称
@@ -17,3 +14,6 @@ eureka:
     #关闭自我保护机制,保证不可用服务被及时剔除
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 2000
+
+server:
+  port: 7001
