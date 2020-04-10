@@ -76,6 +76,11 @@ public class OrderController {
      * 1. 注释掉com.atguigu.springcloud.config.ApplicationContextConfig的getRestTemplate方法的@LoadBalanced注解,
      * 因为我们要自我实现负载均衡,所以这里就不需要利用这个负载均衡了
      * 2.创建com.atguigu.lb.LoadBalancer接口,我们将要面向接口编程
-     *
      */
+
+    @GetMapping(value = "/consumer/payment/zipkin")
+    public String paymentZipkin() {
+        String result = restTemplate.getForObject("http://localhost:8001/payment/zipkin", String.class);
+        return result;
+    }
 }
